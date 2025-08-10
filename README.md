@@ -35,38 +35,52 @@ The toolkit is built with usability and reproducibility in mind, making it suita
    cd biomech-data-toolkit
 
 # create and activate a virtual environment
+```bash
 python -m venv venv
 source venv/bin/activate   # macOS/Linux
 .\venv\Scripts\activate    # Windows PowerShell
-
+```
 # install dependencies
-   python -m pip install -r requirements.txt
+```bash
+python -m pip install -r requirements.txt
+```
 
 # load and filter data
+```bash
    from src.data_loader import load_csv
    from src.signal_processing import lowpass_filter
    from src.features import range_of_motion
    import matplotlib.pyplot as plt
+```
    
 # Load sample data
+```bash
 df = load_csv('data/sample_data.csv')
+```
 
 # Filter knee joint angle
+```bash
 filtered_knee = lowpass_filter(df['ankle_angle_knee'], cutoff=6, fs=100)
+```
 
 # Plot raw vs filtered
+```bash
 plt.plot(df['time'], df['ankle_angle_knee'], label='Raw')
 plt.plot(df['time'], filtered_knee, label='Filtered')
 plt.xlabel('Time (s)')
 plt.ylabel('Knee Angle (degrees)')
 plt.legend()
 plt.show()
+```
 
 # Calculate range of motion
+```bash
 rom_knee = range_of_motion(filtered_knee)
 print(f"Knee Range of Motion: {rom_knee:.2f} degrees")
+```
 
 # project structure
+```plaintext
 biomech-data-toolkit/
 ├── data/               # Sample and experimental CSV data files
 ├── notebooks/          # Jupyter notebooks for demos and analysis
@@ -77,6 +91,7 @@ biomech-data-toolkit/
 ├── requirements.txt    # Project dependencies
 ├── README.md           # Project overview and usage instructions
 └── LICENSE             # MIT License
+```
 
 # contributing 
 Contributions are welcome! Please open an issue or submit a pull request to discuss improvements, bug fixes, or new features.
