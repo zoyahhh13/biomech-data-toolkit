@@ -34,21 +34,22 @@ The toolkit is built with usability and reproducibility in mind, making it suita
    git clone https://github.com/YOUR_USERNAME/biomech-data-toolkit.git
    cd biomech-data-toolkit
 
-#create and activate a virtual environment
+# create and activate a virtual environment
 python -m venv venv
 source venv/bin/activate   # macOS/Linux
 .\venv\Scripts\activate    # Windows PowerShell
 
 # install dependencies
-```bash
-python -m pip install -r requirements.txt
+   ```bash
+   python -m pip install -r requirements.txt
 
 # load and filter data
-from src.data_loader import load_csv
-from src.signal_processing import lowpass_filter
-from src.features import range_of_motion
-import matplotlib.pyplot as plt
-
+   ```bash
+   from src.data_loader import load_csv
+   from src.signal_processing import lowpass_filter
+   from src.features import range_of_motion
+   import matplotlib.pyplot as plt
+   
 # Load sample data
 df = load_csv('data/sample_data.csv')
 
