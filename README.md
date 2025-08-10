@@ -40,6 +40,7 @@ source venv/bin/activate   # macOS/Linux
 .\venv\Scripts\activate    # Windows PowerShell
 
 # install dependencies
+```bash
 python -m pip install -r requirements.txt
 
 # load and filter data
