@@ -31,7 +31,7 @@ The toolkit is built with usability and reproducibility in mind, making it suita
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/biomech-data-toolkit.git
+   git clone https://github.com/zoyahhh13/biomech-data-toolkit.git
    cd biomech-data-toolkit
 
 # create and activate a virtual environment
