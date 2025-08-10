@@ -40,11 +40,9 @@ source venv/bin/activate   # macOS/Linux
 .\venv\Scripts\activate    # Windows PowerShell
 
 # install dependencies
-   ```bash
    python -m pip install -r requirements.txt
 
 # load and filter data
-   ```bash
    from src.data_loader import load_csv
    from src.signal_processing import lowpass_filter
    from src.features import range_of_motion
